@@ -1,0 +1,58 @@
+* SPICE3 file created from avsd_opamp_layout.ext - technology: sky130A
+
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+X0 a_181_n17# in1 a_n28_306# vss sky130_fd_pr__nfet_01v8 w=1.79 l=1.00
+X1 vss a_n675_n1020# out2 vss sky130_fd_pr__nfet_01v8 w=62.89 l=1.00
+X2 vss a_n675_n1020# a_n675_n1020# vss sky130_fd_pr__nfet_01v8 w=10.01 l=1.00
+X3 out2 a_582_n17# vdd vdd sky130_fd_pr__pfet_01v8 w=62.89 l=1.00
+X4 a_n1220_n998# a_n1049_1511# vss sky130_fd_pr__res_generic_nd w=27 l=2492
+X5 a_582_n17# a_n28_306# vdd vdd sky130_fd_pr__pfet_01v8 w=10.01 l=1.00
+X6 a_n1220_n998# vdd vss sky130_fd_pr__res_generic_nd w=27 l=2492
+X7 a_n883_n1009# a_n1049_1511# vss sky130_fd_pr__res_generic_nd w=27 l=2492
+X8 vdd a_n28_306# a_n28_306# vdd sky130_fd_pr__pfet_01v8 w=10.01 l=1.00
+X9 a_582_n17# in2 a_181_n17# vss sky130_fd_pr__nfet_01v8 w=1.79 l=1.00
+X10 a_n675_n1020# a_n883_n1009# vss sky130_fd_pr__res_generic_nd w=26 l=2494
+X11 vss a_n675_n1020# a_181_n17# vss sky130_fd_pr__nfet_01v8 w=20.02 l=1.00
+C0 vss vss 5.09fF
+C1 a_n675_n1020# vss 5.61fF
+C2 a_n883_n1009# vss 3.88fF
+C3 vdd vss 125.23fF
+
+v1  vdd gnd dc 1
+v2  vss gnd dc -1
+
+*Load
+R2 out2 ny 1k
+
+v3 in1 nx sine(0 1m 60)
+v4 in2 gnd dc 0
+
+v_u1 nx gnd 0
+v_u2 ny gnd 0
+
+
+.tran 0.1m 1 0.5
+
+
+* ngspice control statements
+.control
+
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+
+*For Transient Analysis
+*plot v(in1)
+*plot v(in2)
+*plot v(out2)
+let pd = v(in1)*i(v_u1)-v(out2)*i(v_u2)
+plot pd
+
+let res = v(out2)[0] / i(v_u2)[0]
+print res
+.endc
+*results
+*pd = 13uW @ sine(0 1m 60) and 1k load
+
+.end

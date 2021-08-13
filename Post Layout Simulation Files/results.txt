@@ -1,0 +1,30 @@
+max_gain = 31.55db => 37.8 V/V
+3db cutoff freq =  1.227747e+06
+
+From gain simulation results:
+	Freq		Gain(db)
+774	4.606450e+07	4.113280e-02	
+775	4.712673e+07	-1.61731e-01
+
+Gain = 0 @ 4.606450e+07Hz 
+=> GBW = 4.606450e+07Hz or 46MHz
+
+Phase Margin : 180 - 78.07 = 101.93
+
+Acm = -9.85db
+=>CMRR = 31.55 - (-9.85) = 41.4db
+
+Voltage:
+output offset = -0.928 V => Input offset = -24.55mV
+
+Input Noise Spectrum : max : 21uV/rthz
+
+pd = 17uW @ sine(0 1m 60) and 1k load
+
+Slew Rate
+32	1.141730e-03	9.379113e-01	
+33	1.155951e-03	-1.00011e+00
+diff 3.6ms for 2V change
+
+SR = 0.5 V/ms
+

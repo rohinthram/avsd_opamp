@@ -341,7 +341,7 @@ $ ngspice transient.cir
 
 # Future Work
 - The area of the op-amp can be reduced
-- 
+- Gain of the op-amp can be increased
 
 # Author
 - R.V.Rohinth Ram

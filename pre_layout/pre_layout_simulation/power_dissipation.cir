@@ -1,0 +1,51 @@
+
+.lib "../../skywater_pdk/sky130_fd_pr/models/sky130.lib.spice" tt
+
+* Stage 1 - Differential amplifier
+xm1 net-_m1-pad1_ in1 net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__nfet_01v8 l=1 w=1.79
+xm2 out1 in2 net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__nfet_01v8 l=1 w=1.79
+xm3 net-_m1-pad1_ net-_m1-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 l=1 w=10
+xm4 out1 net-_m1-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 l=1 w=10
+
+* Current Mirror
+xm5 net-_m1-pad3_ ref vss vss sky130_fd_pr__nfet_01v8 l=1 w=20
+xm6 ref ref vss vss sky130_fd_pr__nfet_01v8 l=1 w=10
+
+* Stage 2 - PMOS Common Source Amplifier
+xm7 out2 out1 vdd vdd sky130_fd_pr__pfet_01v8 l=1 w=62.83
+xm8 out2 ref vss vss sky130_fd_pr__nfet_01v8 l=1 w=62.83
+
+
+* Circuit Bias
+v1  vdd gnd dc 1
+v2  vss gnd dc -1
+xR1 vdd ref gnd sky130_fd_pr__res_high_po_0p69 l=100
+
+*Load
+xR2 out2 ny gnd sky130_fd_pr__res_high_po_0p69 l=1
+
+v3 in1 nx sine(0 1m 60)
+v4 in2 gnd dc 0
+
+v_u1 nx gnd 0
+v_u2 ny gnd 0
+
+
+.tran 0.1m 1 0.5
+
+
+* ngspice control statements
+.control
+
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+
+let pd = v(in1)*i(v_u1)-v(out2)*i(v_u2)
+plot pd
+
+let res = v(out2)[0] / i(v_u2)[0]
+print res
+.endc
+
+.end

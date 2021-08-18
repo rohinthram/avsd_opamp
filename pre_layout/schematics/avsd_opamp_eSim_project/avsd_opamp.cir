@@ -1,0 +1,23 @@
+* /home/rohinth/Desktop/esim_simulation/avsd_opamp/avsd_opamp.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Mon Aug 16 20:09:31 2021
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+M3  Net-_M1-Pad1_ Net-_M1-Pad1_ vdd vdd mosfet_p		
+M1  Net-_M1-Pad1_ in1 Net-_M1-Pad3_ Net-_M1-Pad3_ mosfet_n		
+M2  out1 in2 Net-_M1-Pad3_ Net-_M1-Pad3_ mosfet_n		
+M4  out1 Net-_M1-Pad1_ vdd vdd mosfet_p		
+M5  Net-_M1-Pad3_ ref vss vss mosfet_n		
+v1  vdd GND DC		
+v2  vss GND DC		
+v3  in1 GND sine		
+v4  in2 GND sine		
+M6  ref ref vss vss mosfet_n		
+M7  out2 out1 vdd vdd mosfet_p		
+M8  out2 ref vss vss mosfet_n		
+R1  vdd ref resistor		
+
+.end

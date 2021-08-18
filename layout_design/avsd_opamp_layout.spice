@@ -1,0 +1,20 @@
+* SPICE3 file created from avsd_opamp_layout.ext - technology: sky130A
+
+.option scale=10000u
+
+X0 a_181_n17# in1 a_n28_306# vss sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=179 l=100
+X1 vss a_n292_n2092# out2 vss sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=6289 l=100
+X2 vss a_n292_n2092# a_n292_n2092# vss sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=1001 l=100
+X3 out2 a_582_n17# vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=6289 l=100
+X4 a_n516_n998# vdd vss sky130_fd_pr__res_generic_nd w=27 l=2492
+X5 a_582_n17# a_n28_306# vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1001 l=100
+X6 vdd a_n28_306# a_n28_306# vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1001 l=100
+X7 a_582_n17# in2 a_181_n17# vss sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=179 l=100
+X8 a_n292_n2092# a_n368_n1009# vss sky130_fd_pr__res_generic_nd w=26 l=2494
+X9 a_n368_n1009# a_n440_1511# vss sky130_fd_pr__res_generic_nd w=27 l=2492
+X10 a_n516_n998# a_n440_1511# vss sky130_fd_pr__res_generic_nd w=27 l=2492
+X11 vss a_n292_n2092# a_181_n17# vss sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=2002 l=100
+C0 vss vss 3.31fF
+C1 a_n292_n2092# vss 5.57fF
+C2 a_n368_n1009# vss 3.47fF
+C3 vdd vss 124.25fF

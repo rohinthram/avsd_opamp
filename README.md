@@ -7,8 +7,8 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
 
 # Contents
 - [Open Source Tools Used](#Open-Source-Tools-Used)
-- [Specifications](#Specifications)
 - [Block Diagram](#Block-Diagram)
+- [Specifications](#Specifications)
 - [Installation](#Installation)
     - [eSim Installation](#eSim-Installation)
     - [Ngspice Installation](#Ngspice-Installation)
@@ -42,13 +42,47 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
     - Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology.
     - http://opencircuitdesign.com/magic/
 
-
-# Specifications
-![Specifications](readme_assets/specifications.png)
-
 # Block Diagram
 ![Block Diagram](readme_assets/block_diagram.png)
 
+# Specifications
+
+<table>
+<tr>
+    <th>Specification</th>
+    <th>Value</th>
+</tr>
+<tr>
+    <td>Differential Gain</td>
+    <td>31.55dB</td>
+</tr>
+<tr>
+    <td>CMRR</td>
+    <td>41.4dB</td>
+</tr>
+<tr>
+    <td>Gain Bandwidth Product</td>
+    <td>46MHz</td>
+</tr>
+<tr>
+    <td>Phase Margin</td>
+    <td>101.93&deg;</td>
+</tr>
+<tr>
+    <td>Input Offset Voltage</td>
+    <td>-24.55mV</td>
+</tr>
+<tr>
+    <td>Power Dissipation<sup>*</sup></td>
+    <td>17&micro;W</td>
+</tr>
+<tr>
+    <td>Slew Rate</td>
+    <td>180 V/&micro;s</td>
+</tr>
+
+
+</table>
 # Installation
 - The eSim Software is currently available for Windows 7, 8 and 10 and Ubuntu 16.04 LTS and above
 

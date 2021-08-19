@@ -80,9 +80,9 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
     <td>Slew Rate</td>
     <td>180 V/&micro;s</td>
 </tr>
-
-
 </table>
+<sup>*</sup> - Power Dissipation measured at 60Hz 1mV p-p sinusoid with 1k&Omega;
+
 # Installation
 - The eSim Software is currently available for Windows 7, 8 and 10 and Ubuntu 16.04 LTS and above
 

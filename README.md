@@ -73,7 +73,9 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
     <td>-24.55mV</td>
 </tr>
 <tr>
-    <td>Power Dissipation<sup>*</sup></td>
+    <td>Power Dissipation at <br/>
+    60Hz 1mV p-p sinusoid <br/>
+    with 1k&Omega;</td>
     <td>17&micro;W</td>
 </tr>
 <tr>
@@ -81,7 +83,6 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
     <td>180 V/&micro;s</td>
 </tr>
 </table>
-<sup>*</sup> - Power Dissipation measured at 60Hz 1mV p-p sinusoid with 1k&Omega;
 
 # Installation
 - The eSim Software is currently available for Windows 7, 8 and 10 and Ubuntu 16.04 LTS and above

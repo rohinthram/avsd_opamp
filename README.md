@@ -47,7 +47,7 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
 
 # Specifications
 
-<table>
+<table align="center">
 <tr>
     <th>Specification</th>
     <th>Value</th>
@@ -108,11 +108,13 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
     ```
 
 ## eSim Installation
+Please refer to the following links for proper installation of *eSim*
 - https://static.fossee.in/esim/installation-files/Install_eSim_on_Windows.pdf
 
 - https://github.com/FOSSEE/eSim/blob/master/INSTALL
 
 ## Ngspice Installation
+Please refer to the following links for proper installation of *Ngspice*
 - http://ngspice.sourceforge.net/download.html
 
 ## SkyWater PDK Installation
@@ -171,11 +173,11 @@ $ git clone https://github.com/rohinthram/avsd_opamp
 Or download and extract the files
 
 # Pre Layout Schematic and Simulations
-- Go to the directory  `pre_layout/pre_layout_simulation` 
+- Go to the directory  `pre_layout/pre_layout_simulation`  <br/>
     ```
     $ cd pre_layout/pre_layout_simulation
     ```
-- Execute each and every `.cir` using `ngspice` command from terminal
+- Execute each and every `.cir` using `ngspice` command from terminal <br/>
     ```
     $ ngspice <file-name>
     ```
@@ -211,7 +213,7 @@ $ ngspice offset_voltage.cir
 ```
 $ ngspice input_noise_spectrum.cir
 ```	
-For obtaining Noise Spectrum 
+To obtain Noise Spectrum 
 - Please run the following commands in the ngspice window for obtaining the plot
 
 
@@ -286,11 +288,11 @@ cp avsd_opamp/skywater_pdk/sky130A.tech <target-destination>
 - Make necessary changes to the **.spice** file so that it can be run in `ngspice` (The modified file can be found in *post_layout/post_layout_simulations* directory)
 
 # Post Layout Simulations
-- Go to the directory  `post_layout/post_layout_simulation` by executing the command from parent directory
+- Go to the directory  `post_layout/post_layout_simulation` by executing the command from parent directory<br/>
     ```
     $ cd post_layout/post_layout_simulation
     ```
-- Execute each and every `.cir` using `ngspice` command from terminal
+- Execute each and every `.cir` using `ngspice` command from terminal<br/>
     ```
     $ ngspice <file-name>
     ```
@@ -374,14 +376,24 @@ $ ngspice transient.cir
 
 ![Transient Analysis](post_layout/post_layout_plots/transient.png)
 
+<blockquote>
+Note: 
+<ul>
+    <li>For performing any of the simulation mentioned in this repository the <b>sky130_fd_pr</b> folder is necessary.
+    <li>All simulation given in this repository are properly linked to the <b>sky130_fd_pr</b> library. Hence files execute with no error if the <i> folders are kept as such</i>
+    <li>For any external simulation using SkyWater Models, it a must to properly include the library
+</ul>
+</blockquote>
+
+
 # Future Work
-- The area of the op-amp can be reduced
-- Gain of the op-amp can be increased
+- The **Area** of the Operational Amplifier can be **reduced**
+- The **Gain** of the Operational Amplifier can be **increased**
 
 # Author
 - R.V.Rohinth Ram
 
 # Acknowledgements
-- Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalghosh@gmail.com
+- Kunal Ghosh, Co-founder, VLSI System Design (VSD) Corp. Pvt. Ltd. - kunalghosh@gmail.com
 
 ---

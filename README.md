@@ -14,7 +14,6 @@ This project presents the design of a Two Stage CMOS Operational Amplifier using
     - [Ngspice Installation](#Ngspice-Installation)
     - [SkyWater PDK Installation](#SkyWater-PDK-Installation)
     - [Magic Installation](#Magic-Installation)
-
 - [Clone This Project](#Clone-This-Project)
 - [Pre Layout Schematic and Simulations](#Pre-Layout-Schematic-and-Simulations)
 - [Layout Design Using Magic](#Layout-Design-Using-Magic)
@@ -174,10 +173,12 @@ Or download and extract the files
 
 # Pre Layout Schematic and Simulations
 - Go to the directory  `pre_layout/pre_layout_simulation`  <br/>
+
     ```
     $ cd pre_layout/pre_layout_simulation
     ```
 - Execute each and every `.cir` using `ngspice` command from terminal <br/>
+
     ```
     $ ngspice <file-name>
     ```
@@ -248,7 +249,7 @@ $ ngspice slew_rate.cir
 
 ![Slew Rate](pre_layout/pre_layout_plots/slew_rate.png)
 
-A much easier plot to see slew rate could be obtained by chaning the analysis as
+A much easier plot to see slew rate could be obtained by changing the analysis as
 ```
 .tran 0.01u 2u
 ```
@@ -289,10 +290,12 @@ cp avsd_opamp/skywater_pdk/sky130A.tech <target-destination>
 
 # Post Layout Simulations
 - Go to the directory  `post_layout/post_layout_simulation` by executing the command from parent directory<br/>
+
     ```
     $ cd post_layout/post_layout_simulation
     ```
 - Execute each and every `.cir` using `ngspice` command from terminal<br/>
+
     ```
     $ ngspice <file-name>
     ```
@@ -363,7 +366,7 @@ $ ngspice slew_rate.cir
 
 ![Slew Rate](post_layout/post_layout_plots/slew_rate.png)
 
-A much easier plot to see slew rate could be obtained by chaning the analysis as
+A much easier plot to see slew rate could be obtained by changing the analysis as
 ```
 .tran 0.01u 2u
 ```
@@ -381,7 +384,7 @@ Note:
 <ul>
     <li>For performing any of the simulation mentioned in this repository the <b>sky130_fd_pr</b> folder is necessary.
     <li>All simulation given in this repository are properly linked to the <b>sky130_fd_pr</b> library. Hence files execute with no error if the <i> folders are kept as such</i>
-    <li>For any external simulation using SkyWater Models, it a must to properly include the library
+    <li>For any external simulation using SkyWater Models, it is a must to properly include the library
 </ul>
 </blockquote>
 

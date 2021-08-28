@@ -397,6 +397,6 @@ Note:
 - R.V.Rohinth Ram
 
 # Acknowledgements
-- Kunal Ghosh, Co-founder, VLSI System Design (VSD) Corp. Pvt. Ltd. - kunalghosh@gmail.com
+- Kunal Ghosh, Co-founder, VLSI System Design (VSD) Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 
 ---
